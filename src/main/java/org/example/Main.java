@@ -24,5 +24,18 @@ public class Main {
             sum += number;
         }
         System.out.println(sum);
+
+        //Schritt 3: Finde die größte Zahl im Array und gib sie auf der Konsole aus.//
+        System.out.println("Max: " + searchMaximum(numbers1));
+
+    }
+    public static int searchMaximum(int[] searchArray){
+        int returnMax = 0;
+        for(int search : searchArray){
+            if(returnMax < search){
+                returnMax = search;
+            }
+        }
+        return returnMax;
     }
 }
