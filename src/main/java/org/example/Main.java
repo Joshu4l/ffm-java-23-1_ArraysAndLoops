@@ -1,4 +1,5 @@
 package org.example;
+import java.util.Scanner;  // Import the Scanner class
 
 
 
@@ -46,7 +47,15 @@ public class Main {
         for (int number: number3) {
             System.out.println(number);
         }
+
+        //Implementiere ein Programm, das einen Text von der Konsole einliest und anschließend die Buchstaben einzeln ausgibt. Tipp : Erkundigt euch über die Klasse Scanner.
+        for (String character: wrapUserInput1by1()) {
+            System.out.println(character);
+        }
+
     }
+
+
     public static int searchMaximum(int[] searchArray){
         int returnMax = 0;
         for(int search : searchArray){
@@ -73,5 +82,16 @@ public class Main {
         }
 
         return numbers3;
+    }
+
+
+    public static String[] wrapUserInput1by1 (){
+        Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+        System.out.println("Enter username");
+
+        String userInput = myObj.nextLine();  // Read user input
+        String[] result = userInput.split("");
+        return result;
+
     }
 }
