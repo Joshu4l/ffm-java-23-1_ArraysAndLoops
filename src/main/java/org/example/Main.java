@@ -39,6 +39,13 @@ public class Main {
             System.out.println(number);
         }
 
+        //Schritt 5: Führe eine elementweise Addition beider Arrays durch und speichere das Ergebnis in einem dritten Array. Gib das Ergebnis-Array auf der Konsole aus.
+        System.out.println("--elementweise Addition beider Arrays--");
+        int[] number3 = addArrayElements(numbers1, numbers2);
+
+        for (int number: number3) {
+            System.out.println(number);
+        }
     }
     public static int searchMaximum(int[] searchArray){
         int returnMax = 0;
@@ -50,5 +57,21 @@ public class Main {
         return returnMax;
     }
 
+    public static int[] addArrayElements(int [] array1, int [] array2){
+        int [] numbers3 = new int [10];
 
+        //---In Case one Array is longer than the other ---
+        int arrayLenght;
+        if(array1.length < array2.length){
+            arrayLenght = array1.length;
+        }else{
+            arrayLenght = array2.length;
+        }
+
+        for(int x = 0; x < arrayLenght; x++){
+            numbers3[x] = array1[x]+array2[x];
+        }
+
+        return numbers3;
+    }
 }
