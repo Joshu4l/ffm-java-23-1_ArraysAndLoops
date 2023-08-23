@@ -28,6 +28,17 @@ public class Main {
         //Schritt 3: Finde die größte Zahl im Array und gib sie auf der Konsole aus.//
         System.out.println("Max: " + searchMaximum(numbers1));
 
+        //Schritt 4: Erstelle ein zweites Array mit den Zahlen von 11 bis 20.
+        System.out.println("----");
+        int[] numbers2 = new int[10];
+
+        for(int i=0; i<numbers2.length; i++) {
+            numbers2[i] = 11+i;
+        }
+        for (int number: numbers2) {
+            System.out.println(number);
+        }
+
     }
     public static int searchMaximum(int[] searchArray){
         int returnMax = 0;
@@ -38,4 +49,6 @@ public class Main {
         }
         return returnMax;
     }
+
+
 }
