@@ -16,5 +16,13 @@ public class Main {
         for (int number: numbers1) {
             System.out.println(number);
         }
+
+        //Schritt 2: Berechne die Summe aller Zahlen im Array und gib das Ergebnis auf der Konsole aus.
+        int sum = 0;
+
+        for(int number: numbers1) {
+            sum += number;
+        }
+        System.out.println(sum);
     }
 }
